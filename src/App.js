@@ -42,16 +42,15 @@ const App = () => {
       <div className="App">
         <Header name={cvInfo.name} picture={cvInfo.picture} description={cvInfo.description} carrer={cvInfo.carrer} />
         <Socials socials={socials} />
-        <div className="container flex mx-auto">
-          <div className="grid grid-cols-2">
-            {/* listado para experiencia laboral */}
-            <Content name={experiencies.name} posts={experiencies.posts} />
-            {/* listado para estudios realizados */}
-            <Content name={studies.name} posts={studies.posts} />
-         
-            <Skills name={skills.name} posts={skills.posts} />
-            <Repositories name={repositories.name} posts={repositories.posts} />
-          </div>
+        <div className="container ">
+          {/* listado para experiencia laboral */}
+          <Content name={experiencies.name} posts={experiencies.posts} />
+          {/* listado para estudios realizados */}
+          <Content name={studies.name} posts={studies.posts} />
+
+          <Skills name={skills.name} posts={skills.posts} />
+          <Repositories name={repositories.name} posts={repositories.posts} />
+
         </div>
 
       </div>
