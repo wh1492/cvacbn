@@ -25,6 +25,7 @@ const Content = (props) => {
       <div className="wh-cnt-block">
         <h3 className="wh-cnt-block--title text-orange">{name.toUpperCase()}</h3>
         {posts.map(post => <PostCard
+          key={post.id}
           name={post.name}
           date_end={post.date_end}
           date_init={post.date_init}

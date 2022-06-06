@@ -1,7 +1,7 @@
 import React from "react";
 
 const RepoCard = (props) => {
-  const { name, content, date_init, date_end, institution, location } = props
+  const { name, content } = props
   return (
     <>
       <div className="wh-cnt-block-item">
@@ -19,6 +19,7 @@ const Repositories = (props) => {
       <div className="wh-cnt-block">
         <h3 className="wh-cnt-block--title text-orange">{name.toUpperCase()}</h3>
         {posts.map(post => <RepoCard
+          key={post.id}
           name={post.name}
           content={post.url_repository}
         />

@@ -8,9 +8,9 @@ function loopSkill(value) {
   for (let i = 1; i <= 5; i++) {
     //  rows.push(`<span class="circle-skill ${i <= value ? 'active text-orange' : ''}">4</span>`)
     if (i <= value) {
-      rows.push(<span class="circle-skill active"></span>)
+      rows.push(<span key={i} className="circle-skill active"></span>)
     } else {
-      rows.push(<span class="circle-skill "></span>)
+      rows.push(<span key={i} className="circle-skill "></span>)
     }
   }
   return (
@@ -26,7 +26,7 @@ const SkillCard = (props) => {
   // console.log('Skill: ', props)
   return (
     <>
-      <div className="wh-cnt-block-item">
+      <div className="wh-cnt-block-item" >
         <h2 className="text-bold">{name}</h2>
         {loopSkill(content)}
       </div>
@@ -35,12 +35,13 @@ const SkillCard = (props) => {
 }
 
 const Skills = (props) => {
-  const { name, posts } = props
+  const { id, name, posts } = props
   return (
     <>
       <div className="wh-cnt-block">
         <h3 className="wh-cnt-block--title text-orange">{name.toUpperCase()}</h3>
         {posts.map(post => <SkillCard
+          key={post.id}
           name={post.name}
           content={post.skill_range}
         />

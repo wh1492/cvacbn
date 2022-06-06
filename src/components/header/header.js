@@ -3,11 +3,11 @@ import './header.scss';
 
 const Header = (props) => {
   const { name, carrer, picture, description } = props
-  console.log('props: ', props)
+  // console.log('props: ', props)
   return (
     <>
       <div className="header">
-        <div className="container">
+        <div className="container mx-auto">
           <picture style={{
             height: "150px",
             width: "150px",
