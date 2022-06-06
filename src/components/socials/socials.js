@@ -6,7 +6,7 @@ const Socials = (props) => {
   let linkdnTrim = linkedin.replace('https://', '')
   return (
     <div style={{ background: '#2c343f', color: 'white' }}>
-      <div className="container">
+      <div className="container mx-auto">
         <ul>
           <li>
             <a href={"mailto:" + mail}>{mail}</a>
