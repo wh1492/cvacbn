@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
+import Loader from "./components/commons/loader";
 import Header from "./components/header/header";
+import Content from "./components/content/content";
+import Repositories from "./components/repositories/repositories";
 
 import './App.scss'
 
 const App = () => {
   const [cvInfo, setcvInfo] = useState({});
+  const [loading, setLoading] = useState(true)
 
   const fetchPost = async () => {
     const response = await fetch(
@@ -12,7 +16,7 @@ const App = () => {
     );
     const data = await response.json();
     setcvInfo(data);
-
+    setLoading(false)
   };
 
   useEffect(() => {
@@ -26,17 +30,27 @@ const App = () => {
   const repositories = cvInfo.repositories
   const portafolio = cvInfo.portafolio
 
-
-  return (
-    <div className="App">
-      <Header name={cvInfo.name} picture={cvInfo.picture} description={cvInfo.description} carrer={cvInfo.carrer} />
-      <pre>
-        {
-          JSON.stringify(cvInfo)
-        }
-      </pre>
-    </div>
-  );
+  if (loading) {
+    return (
+      <Loader />
+    )
+  } else {
+    return (
+      <div className="App">
+        <Header name={cvInfo.name} picture={cvInfo.picture} description={cvInfo.description} carrer={cvInfo.carrer} />
+        {/* listado para experiencia laboral */}
+        <Content name={experiencies.name} posts={experiencies.posts} />
+        {/* listado para estudios realizados */}
+        <Content name={studies.name} posts={studies.posts} />
+        <Repositories name={repositories.name} posts={repositories.posts} />
+        {/* <pre>
+          {
+            JSON.stringify(cvInfo)
+          }
+        </pre> */}
+      </div>
+    );
+  }
 }
 
 export default App;

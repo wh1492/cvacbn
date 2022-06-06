@@ -8,10 +8,18 @@ const Header = (props) => {
     <>
       <div className="header">
         <div className="container">
-          <img src={picture[0]} />
-          <h2>{name}</h2>
-          <h3>{carrer}</h3>
-          <p>
+          <picture style={{
+            height: "150px",
+            width: "150px",
+            display: "inline-block",
+            overflow:"hidden",
+            border: "4px solid #cf491a"
+          }}>
+          <img src={picture ? picture[0] : ''} alt={name} />
+          </picture>
+          <h2 className="text-highlight">{name.toUpperCase()}</h2>
+          <h3 className="text-orange text-highlight">{carrer.toUpperCase()}</h3>
+          <p className="text-semiBold">
             {description}
           </p>
         </div>
