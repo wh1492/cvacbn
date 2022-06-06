@@ -43,13 +43,19 @@ const App = () => {
         <Header name={cvInfo.name} picture={cvInfo.picture} description={cvInfo.description} carrer={cvInfo.carrer} />
         <Socials socials={socials} />
         <div className="container ">
-          {/* listado para experiencia laboral */}
-          <Content name={experiencies.name} posts={experiencies.posts} />
-          {/* listado para estudios realizados */}
-          <Content name={studies.name} posts={studies.posts} />
+          <div className="row">
+            <div className="col-7">
+              {/* listado para experiencia laboral */}
+              <Content name={experiencies.name} posts={experiencies.posts} />
+              {/* listado para estudios realizados */}
+              <Content name={studies.name} posts={studies.posts} />
+            </div>
+            <div className="col-5">
+              <Skills name={skills.name} posts={skills.posts} />
+              <Repositories name={repositories.name} posts={repositories.posts} />
+            </div>
+          </div>
 
-          <Skills name={skills.name} posts={skills.posts} />
-          <Repositories name={repositories.name} posts={repositories.posts} />
 
         </div>
 

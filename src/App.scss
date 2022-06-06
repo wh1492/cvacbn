@@ -1,3 +1,7 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700;800&display=swap');
 
 
@@ -10,12 +14,12 @@ body {
   color      : #151515;
 }
 
-.container {
-  width       : 100%;
-  max-width   : 960px;
-  margin-left : auto;
-  margin-right: auto;
-}
+// .container {
+//   width       : 100%;
+//   max-width   : 960px;
+//   margin-left : auto;
+//   margin-right: auto;
+// }
 
 .text-orange {
   color: #f14738;

@@ -5,11 +5,13 @@ const PostCard = (props) => {
   const { name, content, date_init, date_end, institution, location } = props
   return (
     <>
-      <div className="wh-cnt-block-item">
+      <div className="wh-cnt-block-item col">
         <h2 className="text-bold">{name}</h2>
         <h4 className="text-semiBold">{institution}</h4>
-        <h6 className="text-orange text-italic">{date_init} / {date_end}</h6>
-        <h6 className="text-orange text-italic">{location}</h6>
+        <div className="row justify-content-between">
+          <h6 className="text-orange text-italic col text-start">{date_init} / {date_end}</h6>
+          <h6 className="text-orange text-italic col text-end">{location}</h6>
+        </div>
         {content && (
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
         )}
