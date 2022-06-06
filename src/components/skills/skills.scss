@@ -1,0 +1,35 @@
+.skill-indicator {
+  // border : 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .circle-skill {
+    display      : block;
+    position     : relative;
+    width        : 17px;
+    height       : 17px;
+    border       : 2px solid #f14738;
+    border-radius: 100%;
+    margin: 0 0.15rem;
+
+    &:after {
+      content      : '';
+      position     : absolute;
+      width        : 8px;
+      height       : 8px;
+      top          : 50%;
+      left         : 50%;
+      border-radius: 100%;
+      transform    : translate(-50%, -50%);
+      background   : #b7b7b7;
+      opacity      : 0;
+    }
+
+    &.active {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
