@@ -1,4 +1,41 @@
+@import '../../assets/mixings.scss';
+
 .header {
-    background-color: #374457;
-    color           : white;
+  background-color: #374457;
+  color           : white;
+
+  .wh-professional-picture {
+    position: relative;
+    border  : 4px solid #cf491a;
+    border-radius: 100%;
+    display : inline-block;
+    height  : 150px;
+    width   : 150px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  .wh-professional-name {
+    font-size  : toRem(42);
+    line-height: tomRem(34);
+    margin     : 0;
+    padding    : 0;
+  }
+
+  .wh-carrer-name {
+    font-size    : toRem(20);
+    line-height  : tomRem(34);
+    margin-bottom: 1rem;
+  }
+
+  .wh-carrer-description {
+    font-size  : toRem(14);
+    line-height: toRem(18);
+    font-weight: 500;
+  }
 }

@@ -1,0 +1,28 @@
+@import "./mixings.scss";
+
+.wh-cnt-block {
+  border: 1px solid red;
+  &--title {
+    margin-bottom: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: toRem(24);
+    line-height: 1.25;
+    text-decoration: underline;
+    letter-spacing: 0.32rem;
+  }
+  &-item {
+    border: 1px solid lime;
+    &--title {
+      border: 1px solid magenta;
+      font-size: toRem(22);
+      line-height: 1.4;
+      margin-bottom: 0.15rem;
+    }
+    &--subtitle {
+      border: 1px solid pink;
+      font-size: toRem(20);
+      line-height: 1.1;
+    }
+  }
+}
