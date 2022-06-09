@@ -1,0 +1,29 @@
+@import "../../assets/mixings.scss";
+
+.wh-contact-block {
+  background: #2c343f;
+  color     : white;
+
+  .container {
+    border: 1px solid magenta;
+  }
+
+  ul,
+  ol {
+    border: 1px solid yellow;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      border: 1px solid aqua;
+      padding-left: toRem(20);
+    }
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+  }
+}

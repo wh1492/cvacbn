@@ -1,14 +1,17 @@
 import React from "react";
 
+import './contacts.scss'
+
 const Contacts = (props) => {
   const { mail, phone, linkedin, skype } = props.contacts
 
   let linkdnTrim = linkedin.replace('https://', '')
   return (
-    <div className="py-4" style={{ background: '#2c343f', color: 'white' }}>
+    <div className="py-4 wh-contact-block">
       <div className="container ">
-        <ul className="row justify-content-between">
+        <ul className="row d-flex justify-content-between align-items-center">
           <li className="col">
+            
             <a href={"mailto:" + mail}>{mail}</a>
           </li>
           <li className="col">
