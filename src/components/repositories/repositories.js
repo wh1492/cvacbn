@@ -1,12 +1,14 @@
 import React from "react";
 
+import './repositories.scss'
+
 const RepoCard = (props) => {
   const { name, content } = props
   return (
     <>
-      <div className="wh-cnt-block-item">
-        <h2 className="text-bold">{name}</h2>
-        <a href={content} target="_blank">{content}</a>
+      <div className="wh-cnt-block-item repositories-item">
+        <h2 className="text-bold repositories-item--title">{name}</h2>
+        <a className="repositories-item--link" href={content} target="_blank">{content}</a>
       </div>
     </>
   )

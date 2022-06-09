@@ -1,0 +1,17 @@
+@import '../../assets/commons.scss';
+
+
+.repositories-item {
+    &--title {
+      font-size: toRem(22);
+    }
+    &--link {
+      color: inherit;
+      text-decoration: none;
+      font-size: toRem(20);
+      transition: all 0.45s ease;
+      &:hover {
+        color: #f14738;
+      }
+    }
+}

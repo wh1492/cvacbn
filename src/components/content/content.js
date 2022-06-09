@@ -8,7 +8,7 @@ const PostCard = (props) => {
       <div className="wh-cnt-block-item col">
         <h2 className="wh-cnt-block-item--title text-bold">{name}</h2>
         <h4 className="wh-cnt-block-item--subtitle text-semiBold">{institution}</h4>
-        <div className="row justify-content-between">
+        <div className="wh-cnt-block-item--dates row justify-content-between">
           <h6 className="text-orange text-italic col text-start">{date_init} / {date_end}</h6>
           <h6 className="text-orange text-italic col text-end">{location}</h6>
         </div>

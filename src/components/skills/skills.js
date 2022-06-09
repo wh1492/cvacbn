@@ -15,7 +15,7 @@ function loopSkill(value) {
   }
   return (
     // <div dangerouslySetInnerHTML={{ __html: rows }}></div>
-    <div className="skill-indicator">
+    <div className="wh-cnt-skill--indicator">
       {rows}
     </div>
   )
@@ -26,8 +26,8 @@ const SkillCard = (props) => {
   // console.log('Skill: ', props)
   return (
     <>
-      <div className="wh-cnt-block-item" >
-        <h2 className="text-bold">{name}</h2>
+      <div className="wh-cnt-skill-item d-flex justify-content-between" >
+        <h4 className="wh-cnt-skill--title text-bold">{name}</h4>
         {loopSkill(content)}
       </div>
     </>

@@ -42,7 +42,7 @@ const App = () => {
       <div className="App">
         <Header name={cvInfo.name} picture={cvInfo.picture} description={cvInfo.description} carrer={cvInfo.carrer} />
         <Socials socials={socials} />
-        <div className="container ">
+        <div className="container main-body">
           <div className="row">
             <div className="col-md-7">
               {/* listado para experiencia laboral */}
