@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./components/commons/loader";
 import Header from "./components/header/header";
-import Socials from "./components/socials/socials";
+import Contacts from "./components/contacts/contacts";
 import Content from "./components/content/content";
 import Skills from "./components/skills/skills";
 import Repositories from "./components/repositories/repositories";
@@ -25,7 +25,7 @@ const App = () => {
     fetchPost();
   }, []);
   // const nombre = cvInfo.nombre
-  const socials = cvInfo.social
+  const contacts = cvInfo.contact
   const experiencies = cvInfo.experiencies
   const studies = cvInfo.studies
   const languages = cvInfo.languages
@@ -41,7 +41,7 @@ const App = () => {
     return (
       <div className="App">
         <Header name={cvInfo.name} picture={cvInfo.picture} description={cvInfo.description} carrer={cvInfo.carrer} />
-        <Socials socials={socials} />
+        <Contacts contacts={contacts} />
         <div className="container main-body">
           <div className="row">
             <div className="col-md-7">

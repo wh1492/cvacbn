@@ -1,7 +1,7 @@
 import React from "react";
 
-const Socials = (props) => {
-  const { mail, phone, linkedin, skype } = props.socials
+const Contacts = (props) => {
+  const { mail, phone, linkedin, skype } = props.contacts
 
   let linkdnTrim = linkedin.replace('https://', '')
   return (
@@ -26,4 +26,4 @@ const Socials = (props) => {
   )
 }
 
-export default Socials
+export default Contacts
