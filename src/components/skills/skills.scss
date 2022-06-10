@@ -1,15 +1,19 @@
+@import '../../assets/commons.scss';
+
 .wh-cnt-skill {
   &-item {
-    align-items: center;
+    align-items  : center;
     margin-bottom: 1rem;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 
   &--title {
-    width : 60%;
-    margin: 0;
+    width    : 60%;
+    margin   : 0;
+    font-size: toRem(20);
   }
 
   &--indicator {

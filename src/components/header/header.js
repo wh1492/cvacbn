@@ -8,7 +8,7 @@ const Header = (props) => {
       <div className="header py-4">
         <div className="container">
           <div className="row justify-content-between align-items-start">
-            <div className="col-md-2 order-md-2">
+            <div className="col-md-4 col-lg-2 order-md-2">
               <picture className="wh-professional-picture">
                 <img src={picture ? picture[0] : ''} alt={name} />
               </picture>

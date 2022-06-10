@@ -36,18 +36,22 @@ const SkillCard = (props) => {
 
 const Skills = (props) => {
   const { id, name, posts } = props
-  return (
-    <>
-      <div className="wh-cnt-block">
-        <h3 className="wh-cnt-block--title text-orange">{name.toUpperCase()}</h3>
-        {posts.map(post => <SkillCard
-          key={post.id}
-          name={post.name}
-          content={post.skill_range}
-        />
-        )}
-      </div>
-    </>
-  )
+  if (posts === null) {
+    return null
+  } else {
+    return (
+      <>
+        <div className="wh-cnt-block">
+          <h3 className="wh-cnt-block--title text-orange">{name.toUpperCase()}</h3>
+          {posts.map(post => <SkillCard
+            key={post.id}
+            name={post.name}
+            content={post.skill_range}
+          />
+          )}
+        </div>
+      </>
+    )
+  }
 }
 export default Skills

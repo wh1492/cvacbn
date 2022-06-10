@@ -5,6 +5,7 @@ import Contacts from "./components/contacts/contacts";
 import Content from "./components/content/content";
 import Skills from "./components/skills/skills";
 import Repositories from "./components/repositories/repositories";
+import Projects from "./components/projects/projects";
 
 import './App.scss'
 
@@ -53,6 +54,7 @@ const App = () => {
             <div className="col-md-5">
               <Skills name={skills.name} posts={skills.posts} />
               <Repositories name={repositories.name} posts={repositories.posts} />
+              <Projects name={portafolio.name} posts={portafolio.posts} />
             </div>
           </div>
 

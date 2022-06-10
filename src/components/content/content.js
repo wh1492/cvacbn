@@ -22,8 +22,10 @@ const PostCard = (props) => {
 
 const Content = (props) => {
   const { name, posts } = props
-  return (
-    <>
+  if (posts === null) {
+    return null
+  } else {
+    return (
       <div className="wh-cnt-block">
         <h3 className="wh-cnt-block--title text-orange">{name.toUpperCase()}</h3>
         {posts.map(post => <PostCard
@@ -37,10 +39,8 @@ const Content = (props) => {
         />
         )}
       </div>
-    </>
-  )
-
-
+    )
+  }
 }
 
 export default Content

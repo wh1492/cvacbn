@@ -16,36 +16,46 @@ const Contacts = (props) => {
     <div className=" wh-contact-block">
       <div className="container ">
         <ul className="row d-flex justify-content-between align-items-center">
-          <li className="">
-            <a href={"mailto:" + mail}>
-              <GrMail />
-              {mail}
-            </a>
-          </li>
-          <li className="">
-            <a href={"tel:" + phone}>
-              <BsWhatsapp />
-              {phone}
-            </a>
-          </li>
-          <li className="">
-            <span >
-              <HiLocationMarker />
-              {location}
-            </span>
-          </li>
-          <li className="">
-            <a href={linkedin} target="_blank">
-              <FaLinkedinIn />
-              {linkdnTrim}
-            </a>
-          </li>
-          <li className="">
-            <a href={"skype:" + skype}>
-              <GrSkype />
-              {skype}
-            </a>
-          </li>
+          {mail && (
+            <li className="">
+              <a href={"mailto:" + mail}>
+                <GrMail />
+                {mail}
+              </a>
+            </li>
+          )}
+          {phone && (
+            <li className="">
+              <a href={"tel:" + phone}>
+                <BsWhatsapp />
+                {phone}
+              </a>
+            </li>
+          )}
+          {location && (
+            <li className="">
+              <span >
+                <HiLocationMarker />
+                {location}
+              </span>
+            </li>
+          )}
+          {linkedin && (
+            <li className="">
+              <a href={linkedin} target="_blank">
+                <FaLinkedinIn />
+                {linkdnTrim}
+              </a>
+            </li>
+          )}
+          {skype && (
+            <li className="">
+              <a href={"skype:" + skype}>
+                <GrSkype />
+                {skype}
+              </a>
+            </li>
+          )}
         </ul>
       </div>
     </div>

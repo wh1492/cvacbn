@@ -4,17 +4,22 @@
   margin-bottom: 2.2rem;
 
   &--title {
-    margin-bottom  : 1rem;
+    margin-bottom  : 0.25rem;
     text-transform : uppercase;
     font-weight    : 900;
-    font-size      : toRem(24);
+    font-size      : toRem(20);
     line-height    : 1.25;
     text-decoration: underline;
-    letter-spacing : 0.315rem;
+    letter-spacing : 0.05rem;
+    @media all and (min-width:992px){
+      font-size  : toRem(24);
+      letter-spacing : 0.15rem;
+      margin-bottom  : 1rem;
+    }
   }
 
   &-item {
-    font-size    : toRem(18);
+    // font-size    : toRem(18);
     line-height  : 1.4;
     font-weight  : 400;
     margin-bottom: 1.05rem;
@@ -53,16 +58,22 @@
     }
 
     &--title {
-      font-size     : toRem(22);
+      font-size     : toRem(20);
       line-height   : 1.2;
       margin-bottom : 0.05rem;
       padding-bottom: 0.05rem;
+      @media all and (min-width:992px){
+        font-size  : toRem(22);
+      }
     }
 
     &--subtitle {
-      font-size    : toRem(20);
+      font-size    : toRem(18);
       line-height  : 1.1;
       margin-bottom: 0.15rem;
+      @media all and (min-width:992px){
+        font-size  : toRem(20);
+      }
     }
 
     &--dates {
@@ -71,9 +82,12 @@
       margin-bottom: 1.05rem;
 
       h6 {
-        font-size  : toRem(18);
+        font-size  : toRem(16);
         line-height: 1.2;
         font-weight: 400;
+        @media all and (min-width:992px){
+          font-size  : toRem(18);
+        }
       }
     }
   }
