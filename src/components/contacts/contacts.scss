@@ -2,7 +2,7 @@
 
 .wh-contact-block {
   background: #2c343f;
-  color     : white;
+  color: white;
   padding: 1.25rem 0 0.75rem;
 
   // .container {}
@@ -14,19 +14,32 @@
     list-style-type: none;
 
     li {
-      width: auto;
+      width: 100%;
       padding: 0;
       margin-bottom: 0.5rem;
+
+      @media all and (min-width: 740px) {
+        width: auto;
+      }
     }
   }
 
-  span , a {
+  span,
+  a {
     color: inherit;
     display: inline-block;
     text-decoration: none;
     svg {
       display: inline;
       margin-right: toRem(7);
+    }
+  }
+
+  a {
+    color: inherit;
+    transition: all 0.65s ease;
+    &:hover {
+      color: #f14738;
     }
   }
 }

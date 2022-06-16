@@ -35,7 +35,7 @@ const SkillCard = (props) => {
 }
 
 const Skills = (props) => {
-  const { id, name, posts } = props
+  const { name, posts } = props
   if (posts === null) {
     return null
   } else {

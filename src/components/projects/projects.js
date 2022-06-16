@@ -2,11 +2,10 @@ import React from "react";
 import './projects.scss';
 
 const ProjectCard = (props) => {
-  const { name, content } = props
+  const {  content } = props
   return (
     <>
       <div className="wh-cnt-block-item projects-item">
-        {/* <h2 className="text-bold projects-item--title">{name}</h2> */}
         <a className="projects-item--link" href={content} target="_blank">{content}</a>
       </div>
     </>
